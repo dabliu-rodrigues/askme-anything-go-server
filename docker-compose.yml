@@ -11,6 +11,21 @@ services:
     volumes:
       - db:/var/lib/postgres/data
 
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - 8081:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+
 volumes:
   db:
+    driver: local
+  pgadmin:
     driver: local
