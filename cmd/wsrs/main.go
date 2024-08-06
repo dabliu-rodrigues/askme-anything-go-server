@@ -28,7 +28,7 @@ func main() {
 			os.Getenv("WSRS_DATABASE_PASSWORD"),
 			os.Getenv("WSRS_DATABASE_HOST"),
 			os.Getenv("WSRS_DATABASE_PORT"),
-			os.Getenv("WSRS_DATABASE_NAME	"),
+			os.Getenv("WSRS_DATABASE_NAME"),
 		),
 	)
 
